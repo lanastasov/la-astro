@@ -25,7 +25,7 @@
             text-align: center;
             position: relative;
         }
-        .gallery .item .text {
+        .gallery .item .text, .text2 {
             position: absolute;
             bottom: -30px;
             left: 0;
@@ -36,10 +36,14 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+        .text2 {
+            bottom: -60px;
+        }
         .gallery .item:hover img {
             opacity: 0.7;
         }
-        .gallery .item:hover .text {
+        .gallery .item:hover .text,
+        .gallery .item:hover .text2 {
             opacity: 1;
         }
     </style>
@@ -50,50 +54,62 @@
         <div class="item">
             <img src="img/001-aries.png" alt="Image 1">
             <div class="text">aries</div>
+            <div class="text2">0° to 30°</div>
         </div>
         <div class="item">
             <img src="img/002-taurus.png" alt="Image 2">
             <div class="text">taurus</div>
+            <div class="text2">30° to 60°</div>
         </div>
         <div class="item">
             <img src="img/003-gemini.png" alt="Image 3">
             <div class="text">gemini</div>
+            <div class="text2">60° to 90°</div>
         </div>
         <div class="item">
             <img src="img/004-cancer.png" alt="Image 4">
             <div class="text">cancer</div>
+            <div class="text2">90° to 120°</div>
         </div>
         <div class="item">
             <img src="img/005-leo.png" alt="Image 5">
             <div class="text">leo</div>
+            <div class="text2">120° to 150°</div>
         </div>
         <div class="item">
             <img src="img/006-virgo.png" alt="Image 6">
             <div class="text">virgo</div>
+            <div class="text2">150° to 180°</div>
         </div>
         <div class="item">
             <img src="img/007-libra.png" alt="Image 7">
             <div class="text">libra</div>
+            <div class="text2">180° to 210°</div>
         </div>
         <div class="item">
             <img src="img/008-scorpio.png" alt="Image 8">
             <div class="text">scorpio</div>
+            <div class="text2">210° to 240°</div>
         </div>
         <div class="item">
             <img src="img/009-sagittarius.png" alt="Image 9">
-            <div class="text">sagittarius 9</div>
+            <div class="text">sagittarius</div>
+            <div class="text2">240° to 270°</div>
         </div>
         <div class="item">
             <img src="img/010-capricorn.png" alt="Image 10">
             <div class="text">capricorn</div>
+            <div class="text2">270° to 300°</div>
         </div>
         <div class="item">
             <img src="img/011-aquarius.png" alt="Image 11">
             <div class="text">aquarius</div>
+            <div class="text2">300° to 330°</div>
         </div>
         <div class="item">
             <img src="img/012-pisces.png" alt="Image 12">
             <div class="text">pisces</div>
+            <div class="text2">330° to 360°</div>
         </div>
         <!-- End of repetition -->
     </div>
