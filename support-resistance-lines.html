@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Division and Addition</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Position of the Planet in degrees</h1>
+        <form id="inputForm">
+            <label for="number">Number:</label>
+            <input type="number" id="number" required>
+            <br><br>
+            <!-- 2, 4, 8, .... -->
+            <!-- 0.5, 0.25, 0.125, ...s -->
+            <label for="factor">Division Factor:</label>
+            <input type="number" step="0.01" id="factor" required>
+            <br><br>
+            <button type="button" onclick="calculate()">Calculate</button>
+        </form>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            const number = parseFloat(document.getElementById('number').value);
+            const factor = parseFloat(document.getElementById('factor').value);
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear previous output
+
+            if (isNaN(number) || isNaN(factor)) {
+                outputDiv.innerHTML = 'Please enter valid numbers.';
+                return;
+            }
+
+            let result = number * factor;
+            let sum = result;
+            const max = 22000;
+
+            while (sum <= max) {
+                const p = document.createElement('p');
+                p.textContent = sum;
+                outputDiv.appendChild(p);
+                sum += (360 * factor);
+            }
+        }
+    </script>
+</body>
+</html>
