@@ -69,6 +69,7 @@
 </head>
 <body>
     <button id="f1Button">F1</button>
+    <button id="toggleButton">Toggle Images</button>
     <div class="gallery">
         <div class="item">
             <img src="img/001-aries.png" alt="Image 1">
@@ -143,6 +144,19 @@
             gallery.classList.toggle('dimmed');
             overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
         });
+
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            var image = document.getElementsByTagName('img');
+            for (var i=0; i<image.length; i++) {
+                var currentSrc = image[i].src;
+                if (image[i].src.includes('img/new/')) {
+                    image[i].src = currentSrc.replace('img/new/', 'img/');
+                } else {
+                    image[i].src = currentSrc.replace('img/', 'img/new/');
+                }
+            }
+        });
+
     </script>
 
 </body>
