@@ -69,6 +69,7 @@
 </head>
 <body>
     <button id="f1Button">F1</button>
+    <button id="f2Button">F2</button>
     <button id="toggleButton">Toggle Images</button>
     <div class="gallery">
         <div class="item">
@@ -136,11 +137,20 @@
     <div class="overlay" id="overlay">
         <img src="img/signs-planets.png" alt="Image 13">
     </div>
-
+    <div class="overlay" id="overlay2">
+        <img src="img/signs-circle.png" alt="Image 13">
+    </div>
     <script>
         document.getElementById('f1Button').addEventListener('click', function() {
             var gallery = document.querySelector('.gallery');
             var overlay = document.getElementById('overlay');
+            gallery.classList.toggle('dimmed');
+            overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        document.getElementById('f2Button').addEventListener('click', function() {
+            var gallery = document.querySelector('.gallery');
+            var overlay = document.getElementById('overlay2');
             gallery.classList.toggle('dimmed');
             overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
         });
